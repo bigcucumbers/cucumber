@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<title>panel demo </title>
+<script src="./lib/jquery.min.js"></script>
+<script src="./lib/jquery.easyui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./lib/themes/black/easyui.css" />
+<script>
+$(function(){
+        $("#panel").panel({
+            title:'我是panel',
+            width:300,
+            height:300,
+            closable:true,
+            draggable:true,
+            closed:true
+            });
+
+        $("#btn0").click(function(){
+            $("#panel").panel("open");
+            });
+        $("#btn1").click(function(){
+            $("#panel").panel("close");
+            });
+        });
+
+</script>
+</head>
+<body>
+<input type='button' id="btn0" value="open"/>
+<input type='button' id="btn1" value="close"/>
+<div id="panel"></div>
+</body>
+</html>
